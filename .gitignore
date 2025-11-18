@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+.vscode/
+.venv/
+venv/
+models/
+results/
+predictions/
+data/processed_*.csv
+.ipynb_checkpoints/
+.DS_Store
