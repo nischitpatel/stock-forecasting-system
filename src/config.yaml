@@ -1,0 +1,24 @@
+# data settings
+tickers:
+  - AAPL
+  - MSFT
+  - AMZN
+  - GOOG
+  - FB
+  - JPM
+  - XOM
+start_date: "2018-01-01"
+end_date: "2024-12-31"
+
+# model / training
+encoder_length: 180
+horizons: [30, 60, 90]
+batch_size: 64
+epochs: 40
+lr: 0.001
+seed: 42
+
+# trading
+transaction_cost: 0.0005
+slippage: 0.0005
+top_k: 10
