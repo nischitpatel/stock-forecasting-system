@@ -10,3 +10,4 @@ predictions/
 data/processed_*.csv
 .ipynb_checkpoints/
 .DS_Store
+data/
