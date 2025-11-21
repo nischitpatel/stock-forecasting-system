@@ -1,5 +1,9 @@
 from pathlib import Path
 import yaml
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE = Path(__file__).resolve().parents[1]
 ROOT = BASE
@@ -21,6 +25,7 @@ for p in [MODEL_DIR, PRED_DIR, SIGNAL_DIR, RESULTS, BASE / "data"]:
     p.mkdir(parents=True, exist_ok=True)
 
 # load parameters
+ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_KEY")
 TICKERS = cfg.get("tickers", ["AAPL","MSFT","AMZN"])
 START_DATE = cfg.get("start_date", "2018-01-01")
 END_DATE = cfg.get("end_date", "2024-12-31")
